@@ -22,3 +22,14 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# TypeScript build cache
+*.tsbuildinfo
+
+# ビルド生成物
+dist/
+build/
+
+# その他のキャッシュファイル
+.cache/
+

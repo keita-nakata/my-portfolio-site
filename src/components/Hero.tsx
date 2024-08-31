@@ -3,9 +3,9 @@ import { Typography, Box } from '@mui/material';
 
 const Hero: React.FC = () => {
   return (
-    <Box sx={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
-      <Typography variant="h2">Welcome to My Portfolio</Typography>
-      <Typography variant="h6">I am a passionate developer...</Typography>
+    <Box sx={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', backgroundColor: '#f0f0f0'}}>
+      <Typography variant="h2">けいたのポートフォリオ</Typography>
+      <Typography variant="h6">to be a software engineer</Typography>
     </Box>
   );
 };
