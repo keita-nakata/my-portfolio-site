@@ -20,9 +20,9 @@ const SkillBar: React.FC<BarChartProps> = ({ data, title, backgroundColor='rgba(
             backgroundColor: backgroundColor,
             borderRadius: '30px',
         }}>
-          <Typography variant="h6" sx={{ fontFamily: 'Fredoka', fontWeight: 500, marginLeft: '30px'}}>{title}</Typography>
+          <Typography variant="h6" sx={{ fontFamily: 'Fredoka', fontWeight: 500, marginLeft: '30px', paddingTop: '10px'}}>{title}</Typography>
           <ResponsiveContainer width="90%" height={totalHeight}>
-            <BarChart data={data} layout="vertical">
+            <BarChart data={data} layout="vertical" >
               <CartesianGrid strokeDasharray="3 3" />
               <XAxis 
                 type="number" 
