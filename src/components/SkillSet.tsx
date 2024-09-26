@@ -43,7 +43,7 @@ const SkillSet: React.FC = () => {
 
     return (
         <Box sx={{
-            margin: "100px 100px",
+            margin: "100px 100px 0 100px",
             padding: 0,
         }}>
             <Typography variant="h5" sx={{ fontFamily: 'Fredoka', fontWeight: 500, }}>SKILL SET</Typography>

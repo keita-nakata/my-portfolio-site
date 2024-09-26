@@ -2,6 +2,7 @@ import React from 'react';
 import { Typography, Box } from '@mui/material';
 import BasicInfo from './BasicInfo';
 import SkillSet from './SkillSet';
+import Hobby from './Hobby';
 
 const Profile: React.FC = () => {
   return (
@@ -16,6 +17,7 @@ const Profile: React.FC = () => {
     }}>
       <BasicInfo />
       <SkillSet />
+      <Hobby />
     </Box>
   );
 };
