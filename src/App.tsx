@@ -13,16 +13,16 @@ const App: React.FC = () => {
       <AppBar position="sticky">
         <Toolbar>
           <Link to="hero" spy={true} smooth={true} offset={-70} duration={500}>
-            <Button color="inherit">Home</Button>
+            <Button color="inherit">HOME</Button>
           </Link>
           <Link to="profile" spy={true} smooth={true} offset={-70} duration={500}>
-            <Button color="inherit">Profile</Button>
+            <Button color="inherit">ABOUT</Button>
           </Link>
           <Link to="projects" spy={true} smooth={true} offset={-70} duration={500}>
-            <Button color="inherit">Projects</Button>
+            <Button color="inherit">WORKS</Button>
           </Link>
           <Link to="contact" spy={true} smooth={true} offset={-70} duration={500}>
-            <Button color="inherit">Contact</Button>
+            <Button color="inherit">CONTACT</Button>
           </Link>
         </Toolbar>
       </AppBar>
