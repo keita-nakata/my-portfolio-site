@@ -3,43 +3,66 @@ import { Typography, Box } from "@mui/material";
 import HobbyItem from "./HobbyItem";
 
 const HobbyList: React.FC = () => {
+  const baseballDescription = `野球は小学生の頃から続けているスポーツです。
+  野球を通じて、チームワークやリーダーシップを学びました。
+  また、野球を通じて、多くの友人を作ることができました。
+  野球は私にとって、大切なスポーツです。
+  野球を通じて、チームワークやリーダーシップを学びました。
+  また、野球を通じて、多くの友人を作ることができました。
+  野球は私にとって、大切なスポーツです。
+  野球を通じて、チームワークやリーダーシップを学びました。
+  また、野球を通じて、多くの友人を作ることができました。
+  野球は私にとって、大切なスポーツです。`;
 
-    // ここで1つ1つの項目を設定
-    const hobbies = [
-      { imageUrl: 'images/baseball.jpeg', description: 'This is hobby 1', scale: 0.7 },
-      { imageUrl: 'images/fishing.jpg', description: 'This is hobby 2', scale: 0.5 },
-      { imageUrl: 'images/running_1.jpeg', description: 'This is hobby 3', scale: 0.6 },
-    ];
-  
-    return (
-      <Box>
-        {hobbies.map((hobby, index) => (
-          <HobbyItem
-            key={index}
-            imageUrl={hobby.imageUrl}
-            description={hobby.description}
-            reverse={index % 2 !== 0}
-            scale={hobby.scale}  // 個別に倍率を指定
-          />
-        ))}
-      </Box>
-    );
-  };
+  const fishingDescription = `釣りは大学生の頃から続けている趣味です。
+  野球を通じて、チームワークやリーダーシップを学びました。
+  また、野球を通じて、多くの友人を作ることができました。
+  野球は私にとって、大切なスポーツです。
+  野球を通じて、チームワークやリーダーシップを学びました。
+  また、野球を通じて、多くの友人を作ることができました。
+  野球は私にとって、大切なスポーツです。
+  野球を通じて、チームワークやリーダーシップを学びました。
+  また、野球を通じて、多くの友人を作ることができました。
+  野球は私にとって、大切なスポーツです。`;
+
+  const runningDescription = `ランニングは大学生の頃から続けている趣味です。`;
+
+  // ここで1つ1つの項目を設定
+  const hobbies = [
+    { imageUrl: 'images/baseball.jpeg', description: baseballDescription, scale: 0.7 },
+    { imageUrl: 'images/fishing.jpg', description: fishingDescription, scale: 0.5 },
+    { imageUrl: 'images/running_1.jpeg', description: runningDescription, scale: 0.6 },
+  ];
+
+  return (
+    <Box>
+      {hobbies.map((hobby, index) => (
+        <HobbyItem
+          key={index}
+          imageUrl={hobby.imageUrl}
+          description={hobby.description}
+          reverse={index % 2 !== 0}
+          scale={hobby.scale}  // 個別に倍率を指定
+        />
+      ))}
+    </Box>
+  );
+};
 
 const Hobby: React.FC = () => {
-    return (
-        <Box sx={{
-        margin: "100px 100px 0 100px",
-        padding: 0,
-        }}>
-        <Typography variant="h5" sx={{ fontFamily: 'Fredoka', fontWeight: 500, marginBottom: '50px' }}>HOBBY</Typography>
+  return (
+    <Box sx={{
+      margin: "100px 100px 0 100px",
+      padding: 0,
+    }}>
+      <Typography variant="h5" sx={{ fontFamily: 'Fredoka', fontWeight: 500, marginBottom: '50px' }}>HOBBY</Typography>
+      <Box>
         <Box>
-            <Box>
-                <HobbyList />
-            </Box>
+          <HobbyList />
         </Box>
-        </Box>
-    );
+      </Box>
+    </Box>
+  );
 };
 
 

@@ -26,7 +26,7 @@ const HobbyItem: React.FC<HobbyItemProps> = ({ imageUrl, description, reverse, s
             <Box
                 flex="1"
                 p={8}
-                textAlign={reverse ? 'right' : 'left'}
+                textAlign="left"
             >
                 <Typography variant="body1">{description}</Typography>
             </Box>
