@@ -22,7 +22,7 @@ const WorkItem: React.FC<WorkItemProps> = ({ imageSrc, title, onClick }) => {
             }}>
             <Box margin={1}>
                 <img src={imageSrc} alt={title} style={{ width: '400px', height: '300px', objectFit: 'cover' }} />
-                <Typography variant="h6" mt={1} sx={{ textAlign: 'center' }}>
+                <Typography variant="h6" sx={{ textAlign: 'center' }}>
                     {title}
                 </Typography>
             </Box>
