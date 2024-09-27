@@ -1,9 +1,5 @@
 import React from 'react';
-import { Box, Typography, Button } from '@mui/material';
-import { Link, Element, scroller } from 'react-scroll';
-import Hero from './components/Hero';
-import Profile from './components/Profile';
-import Works from './components/Works';
+import { Box, Typography } from '@mui/material';
 
 const Contact: React.FC = () => {
   return (
