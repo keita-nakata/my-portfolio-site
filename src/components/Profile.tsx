@@ -9,6 +9,8 @@ const Profile: React.FC = () => {
   return (
     <Box sx={{ 
       marginTop: "30px",
+      marginBottom: "50px",
+      paddingBottom: "100px",
       minHeight: '100vh', 
       display: 'flex', 
       flexDirection: 'column', 

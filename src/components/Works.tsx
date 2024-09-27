@@ -26,6 +26,7 @@ const Works: React.FC = () => {
                 flexDirection: 'column',
                 justifyContent: 'center',
                 alignItems: 'center',
+                marginBottom: '100px',
             }}>
             <Typography
                 variant="h4"
@@ -33,7 +34,6 @@ const Works: React.FC = () => {
                     fontFamily: 'Fredoka',
                     fontWeight: 500,
                     letterSpacing: "0.1em",
-                    marginTop: '50px',
                     textAlign: 'center',
                 }}>
                 WORKS
