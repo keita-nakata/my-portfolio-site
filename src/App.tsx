@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, Element, scroller } from 'react-scroll';
 import Hero from './components/Hero';
 import Profile from './components/Profile';
-import Projects from './components/Projects';
+import Works from './components/Works';
 import Contact from './components/Contact';
 import { AppBar, Toolbar, Button, Container } from '@mui/material';
 
@@ -18,7 +18,7 @@ const App: React.FC = () => {
           <Link to="profile" spy={true} smooth={true} offset={-70} duration={500}>
             <Button color="inherit">ABOUT</Button>
           </Link>
-          <Link to="projects" spy={true} smooth={true} offset={-70} duration={500}>
+          <Link to="works" spy={true} smooth={true} offset={-70} duration={500}>
             <Button color="inherit">WORKS</Button>
           </Link>
           <Link to="contact" spy={true} smooth={true} offset={-70} duration={500}>
@@ -35,8 +35,8 @@ const App: React.FC = () => {
         <Element name="profile">
           <Profile />
         </Element>
-        <Element name="projects">
-          <Projects />
+        <Element name="works">
+          <Works />
         </Element>
         <Element name="contact">
           <Contact />
