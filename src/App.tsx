@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, Element, scroller } from 'react-scroll';
+import { Link, Element } from 'react-scroll';
 import Hero from './components/Hero';
 import Profile from './components/Profile';
 import Works from './components/Works';
@@ -8,9 +8,11 @@ import { AppBar, Toolbar, Button, Container } from '@mui/material';
 
 const App: React.FC = () => {
   return (
-    <div>
+    <div style={{
+      backgroundColor: '#ffffff',
+    }}>
       {/* ナビゲーションバー */}
-      <AppBar position="sticky">
+      <AppBar position="sticky" sx={{ backgroundColor: 'transparent', boxShadow: 'none' }}>
         <Toolbar>
           <Link to="hero" spy={true} smooth={true} offset={-70} duration={500}>
             <Button color="inherit">HOME</Button>
@@ -28,7 +30,7 @@ const App: React.FC = () => {
       </AppBar>
 
       {/* コンテンツセクション */}
-      <Container>
+      <Container style={{ padding: 0 }} maxWidth={false}>
         <Element name="hero">
           <Hero />
         </Element>
