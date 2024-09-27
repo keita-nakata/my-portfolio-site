@@ -14,9 +14,9 @@ const Profile: React.FC = () => {
       minHeight: '100vh', 
       display: 'flex', 
       flexDirection: 'column', 
-      backgroundColor: '#f0f0f0',
+      backgroundColor: '#ffffff',
     }}>
-      <Typography variant="h4" sx={{ fontFamily: 'Fredoka', fontWeight: 500, letterSpacing: "0.1em", marginTop: '50px', textAlign: 'center' }}>ABOUT ME</Typography>
+      <Typography variant="h3" sx={{ fontFamily: 'Fredoka', fontWeight: 500, letterSpacing: "0.1em", marginTop: '50px', textAlign: 'center' }}>ABOUT ME</Typography>
       <BasicInfo />
       <SkillSet />
       <Hobby />

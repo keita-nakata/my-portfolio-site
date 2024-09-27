@@ -9,7 +9,7 @@ import { AppBar, Toolbar, Button, Container } from '@mui/material';
 const App: React.FC = () => {
   return (
     <div style={{
-      backgroundColor: '#ffffff',
+      backgroundColor: '#f0f0f0',
     }}>
       {/* ナビゲーションバー */}
       <AppBar position="sticky" sx={{ backgroundColor: 'transparent', boxShadow: 'none' }}>

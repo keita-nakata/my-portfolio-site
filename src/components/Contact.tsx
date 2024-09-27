@@ -7,10 +7,10 @@ const Contact: React.FC = () => {
       sx={{
         display: 'flex',
         justifyContent: 'space-between',
-        padding: 2,
-        backgroundColor: '#f1f1f1',
+        padding: 8,
+        backgroundColor: '#ffffff',
         borderTop: '1px solid #ccc',
-        height: 250,
+        height: 150,
         alignItems: 'center',
       }}
     >
