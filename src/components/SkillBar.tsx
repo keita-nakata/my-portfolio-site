@@ -1,6 +1,6 @@
 import React from "react";
 import { Typography, Box } from "@mui/material";
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, ResponsiveContainer } from 'recharts';
 
 interface BarChartProps {
   data: Array<{ name: string; value: number }>;
@@ -30,7 +30,7 @@ const SkillBar: React.FC<BarChartProps> = ({ data, title, backgroundColor='rgba(
                 tickFormatter={(value) => proficiencyLabels[value]} // Direct mapping of value to label
               />
               <YAxis dataKey="name" type="category" width={150} interval={0} />
-              <Tooltip />
+              {/* <Tooltip /> */}
               <Bar dataKey="value" fill="#8884d8" maxBarSize={fixedBarHeight}/>
             </BarChart>
           </ResponsiveContainer>
