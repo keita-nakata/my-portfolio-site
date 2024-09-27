@@ -10,12 +10,19 @@ const BasicInfo: React.FC = () => {
 
     return (
         <Box sx={{
-            margin: "100px 100px",
+            margin: "100px 200px 0 200px",
             padding: 0,
+            display: 'flex',
+            flexDirection: 'row',
         }}>
-            <Typography variant="body1" sx={{ fontFamily: 'Fredoka', fontWeight: 500, }}>{belonging}</Typography>
-            <Typography variant="body1" sx={{ fontFamily: 'Fredoka', fontWeight: 500, }}>{research}</Typography>
-            <Typography variant="body1" sx={{ fontFamily: 'Fredoka', fontWeight: 500, }}>{myPhilosophy}</Typography>
+            <Box>
+                <img src="images/face.jpeg" alt="Profile" style={{ width: 200, height: 200, borderRadius: 100, marginRight: 80 }} />
+            </Box>
+            <Box>
+                <Typography variant="body1" sx={{ fontFamily: 'Fredoka', fontWeight: 500, }}>{belonging}</Typography>
+                <Typography variant="body1" sx={{ fontFamily: 'Fredoka', fontWeight: 500, }}>{research}</Typography>
+                <Typography variant="body1" sx={{ fontFamily: 'Fredoka', fontWeight: 500, }}>{myPhilosophy}</Typography>
+            </Box>
         </Box>
     );
 };
