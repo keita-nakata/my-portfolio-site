@@ -1,15 +1,27 @@
 import React from 'react';
-import { Typography, Box, TextField, Button } from '@mui/material';
+import { Box, Typography, Button } from '@mui/material';
+import { Link, Element, scroller } from 'react-scroll';
+import Hero from './components/Hero';
+import Profile from './components/Profile';
+import Works from './components/Works';
 
 const Contact: React.FC = () => {
   return (
-    <Box sx={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
-      <Typography variant="h4">Contact Me</Typography>
-      <Box component="form" sx={{ display: 'flex', flexDirection: 'column', width: '300px', marginTop: 2 }}>
-        <TextField label="Name" variant="outlined" sx={{ marginBottom: 2 }} />
-        <TextField label="Email" variant="outlined" sx={{ marginBottom: 2 }} />
-        <TextField label="Message" multiline rows={4} variant="outlined" sx={{ marginBottom: 2 }} />
-        <Button variant="contained" color="primary">Send</Button>
+    <Box
+      sx={{
+        display: 'flex',
+        justifyContent: 'space-between',
+        padding: 2,
+        backgroundColor: '#f1f1f1',
+        borderTop: '1px solid #ccc',
+        height: 250,
+        alignItems: 'center',
+      }}
+    >
+      <Box>
+        <Typography variant="body1" sx={{ fontWeight: 400, letterSpacing: '0.1em' }}>Keita Nakata</Typography>
+        <Typography variant="body2" sx={{ fontFamily: 'sans-serif', fontWeight: 500 }}>中田 啓太</Typography>
+        <Typography variant="body1" marginTop={2}>keita.prog823@gmail.com</Typography>
       </Box>
     </Box>
   );
