@@ -3,17 +3,17 @@ import { Typography, Box } from '@mui/material';
 import SkillBar from './SkillBar';
 
 const SkillSet: React.FC = () => {
-    const description = `自分の技術スタックです。
-    卒業研究は基本的にPythonを用いて行っていたため、Pythonが最も慣れています。
-    また、このWebページの開発やインターンでのプロダクト開発でReactを使用した経験があります。`;
+    // 説明文あとで追加できたら
+    const description = [""];
+    
     const Languages = () => {
         return {
             data: [
                 { name: 'Python', value: 3 },
+                { name: 'JS/TS/GAS', value: 2 },
                 { name: 'C/C++', value: 2 },
                 { name: 'PHP', value: 1 },
                 { name: 'C#', value: 1 },
-                { name: 'JS/TS/GAS', value: 1 },
             ],
             title: "言語"
         };
@@ -43,11 +43,15 @@ const SkillSet: React.FC = () => {
 
     return (
         <Box sx={{
-            margin: "100px 100px 0 100px",
+            margin: "50px 100px 50px 100px",
             padding: 0,
         }}>
-            <Typography variant="h4" sx={{ fontFamily: 'Fredoka', fontWeight: 500, marginBottom: "30px"}}>SKILL SET</Typography>
-            <Typography variant="body1" sx={{ fontFamily: 'Fredoka', fontWeight: 500, marginLeft: "30px"}}>{description}</Typography>
+            <Typography variant="h4" sx={{ fontFamily: 'Fredoka', fontWeight: 500, marginBottom: "30px" }}>SKILL SET</Typography>
+            <Box sx={{ marginLeft: "25px" }}>
+                {description.map((desc, index) => (
+                    <Typography key={index} variant="body1" sx={{ fontFamily: 'Fredoka', fontWeight: 500 }}>{desc}</Typography>
+                ))}
+            </Box>
             <div>
                 <SkillBar data={Languages().data} title={Languages().title} />
                 <SkillBar data={FrameworkDB().data} title={FrameworkDB().title} backgroundColor='rgba(0, 0, 255, 0.1)' />

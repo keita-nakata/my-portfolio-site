@@ -3,12 +3,13 @@ import { Box, Typography } from '@mui/material';
 
 interface HobbyItemProps {
     imageUrl: string;
-    description: string;
+    title: string;
+    description: string[];
     reverse: boolean;
     scale?: number;
 }
 
-const HobbyItem: React.FC<HobbyItemProps> = ({ imageUrl, description, reverse, scale = 1 }) => {
+const HobbyItem: React.FC<HobbyItemProps> = ({ imageUrl, title, description, reverse, scale = 1 }) => {
     return (
         <Box sx={{
             display: 'flex',
@@ -28,7 +29,10 @@ const HobbyItem: React.FC<HobbyItemProps> = ({ imageUrl, description, reverse, s
                 p={8}
                 textAlign="left"
             >
-                <Typography variant="body1">{description}</Typography>
+                <Typography variant="h5" sx={{ fontFamily: 'Fredoka', fontWeight: 500, marginBottom: 2 }}>{title}</Typography>
+                {description.map((text, index) => (
+                    <Typography key={index} variant="body1" sx={{ fontFamily: 'sans-serif', fontWeight: 500, marginBottom: 1 }}>{text}</Typography>
+                ))}
             </Box>
         </Box>
     );

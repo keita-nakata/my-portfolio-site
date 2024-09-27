@@ -1,45 +1,16 @@
 import React from "react";
 import { Typography, Box } from "@mui/material";
 import HobbyItem from "./HobbyItem";
+import { hobbies } from "../data/hobbyData";
 
 const HobbyList: React.FC = () => {
-  const baseballDescription = `野球は小学生の頃から続けているスポーツです。
-  野球を通じて、チームワークやリーダーシップを学びました。
-  また、野球を通じて、多くの友人を作ることができました。
-  野球は私にとって、大切なスポーツです。
-  野球を通じて、チームワークやリーダーシップを学びました。
-  また、野球を通じて、多くの友人を作ることができました。
-  野球は私にとって、大切なスポーツです。
-  野球を通じて、チームワークやリーダーシップを学びました。
-  また、野球を通じて、多くの友人を作ることができました。
-  野球は私にとって、大切なスポーツです。`;
-
-  const fishingDescription = `釣りは大学生の頃から続けている趣味です。
-  野球を通じて、チームワークやリーダーシップを学びました。
-  また、野球を通じて、多くの友人を作ることができました。
-  野球は私にとって、大切なスポーツです。
-  野球を通じて、チームワークやリーダーシップを学びました。
-  また、野球を通じて、多くの友人を作ることができました。
-  野球は私にとって、大切なスポーツです。
-  野球を通じて、チームワークやリーダーシップを学びました。
-  また、野球を通じて、多くの友人を作ることができました。
-  野球は私にとって、大切なスポーツです。`;
-
-  const runningDescription = `ランニングは大学生の頃から続けている趣味です。`;
-
-  // ここで1つ1つの項目を設定
-  const hobbies = [
-    { imageUrl: 'images/baseball.jpeg', description: baseballDescription, scale: 0.7 },
-    { imageUrl: 'images/fishing.jpg', description: fishingDescription, scale: 0.5 },
-    { imageUrl: 'images/running_1.jpeg', description: runningDescription, scale: 0.6 },
-  ];
-
   return (
     <Box>
       {hobbies.map((hobby, index) => (
         <HobbyItem
           key={index}
           imageUrl={hobby.imageUrl}
+          title={hobby.title}
           description={hobby.description}
           reverse={index % 2 !== 0}
           scale={hobby.scale}  // 個別に倍率を指定
@@ -52,7 +23,7 @@ const HobbyList: React.FC = () => {
 const Hobby: React.FC = () => {
   return (
     <Box sx={{
-      margin: "100px 100px 0 100px",
+      margin: "50px 100px 50px 100px",
       padding: 0,
     }}>
       <Typography variant="h4" sx={{ fontFamily: 'Fredoka', fontWeight: 500, marginBottom: '50px' }}>HOBBY</Typography>
