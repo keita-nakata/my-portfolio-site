@@ -10,10 +10,10 @@ interface WorkItemDialogProps {
     title: string;
     description: string[];
     technologies: string;
-    githubUrl: string;
+    githubUrl?: string;
 }
 
-const WorkItemDialog: React.FC<WorkItemDialogProps> = ({ open, onClose, imageSrcList, title, description, technologies, githubUrl }) => {
+const WorkItemDialog: React.FC<WorkItemDialogProps> = ({ open, onClose, imageSrcList, title, description, technologies, githubUrl="" }) => {
     const [selectedImage, setSelectedImage] = useState(imageSrcList[0]);
     const [naturalWidth, setNaturalWidth] = useState(0);
     const [naturalHeight, setNaturalHeight] = useState(0);
@@ -30,12 +30,12 @@ const WorkItemDialog: React.FC<WorkItemDialogProps> = ({ open, onClose, imageSrc
     };
 
     return (
-        <Dialog open={open} onClose={onClose} maxWidth="md" fullWidth>
+        <Dialog open={open} onClose={onClose} maxWidth="lg" fullWidth>
             <DialogContent>
                 <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
                     {/* 左側の説明文 */}
                     <Box sx={{ width: '40%', padding: 2, display: 'flex', flexDirection: 'column' }}>
-                        <Typography variant="h5" gutterBottom sx={{ fontFamily: 'Fredoka', fontWeight: 500 }}>
+                        <Typography variant="h5" gutterBottom sx={{ fontFamily: 'Fredoka', fontWeight: 600 }}>
                             {title}
                         </Typography>
                         <Typography variant='body1'>
@@ -45,14 +45,14 @@ const WorkItemDialog: React.FC<WorkItemDialogProps> = ({ open, onClose, imageSrc
                                 </Typography>
                             ))}
                         </Typography>
-                        <Typography variant='h5' sx={{ fontFamily: 'Fredoka', fontWeight: 500 }}>
-                            使用言語など
+                        <Typography variant='h5' sx={{ fontFamily: 'Fredoka', fontWeight: 600 }}>
+                            使用言語・ツール
                         </Typography>
                         <Typography variant='body1'>
                             {technologies}
                         </Typography>
                         <Box sx={{ justifyContent: 'center', marginTop: 'auto' }}>
-                            <UrlBox url={githubUrl} iconUrl='images/github_2111432.png' label='Github' />
+                            {githubUrl && <UrlBox url={githubUrl} iconUrl='src/assets/img/common/github_2111432.png' label='Github'/>}
                         </Box>
                     </Box>
 

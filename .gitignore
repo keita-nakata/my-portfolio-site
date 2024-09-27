@@ -33,4 +33,4 @@ build/
 # その他のキャッシュファイル
 .cache/
 
-images/
+img/
