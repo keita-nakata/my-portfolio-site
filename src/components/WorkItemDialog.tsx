@@ -1,22 +1,17 @@
 import React, { useState } from 'react';
-import { Dialog, DialogContent, Typography, Box, IconButton, Grid } from '@mui/material';
+import { Dialog, DialogContent, Typography, Box, IconButton } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
+import UrlBox from './UrlBox';
 
 interface WorkItemDialogProps {
     open: boolean;
     onClose: () => void;
     imageSrcList: string[];
     title: string;
-    description: string;
+    description: string[];
     technologies: string;
     githubUrl: string;
 }
-
-const images = [
-    "images/sample1.jpeg",
-    "images/sample2.jpeg",
-    "images/sample3.jpeg",
-];
 
 const WorkItemDialog: React.FC<WorkItemDialogProps> = ({ open, onClose, imageSrcList, title, description, technologies, githubUrl }) => {
     const [selectedImage, setSelectedImage] = useState(imageSrcList[0]);
@@ -30,22 +25,26 @@ const WorkItemDialog: React.FC<WorkItemDialogProps> = ({ open, onClose, imageSrc
             <DialogContent>
                 <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
                     {/* 左側の説明文 */}
-                    <Box sx={{ width: '40%', padding: 2 }}>
-                        <Typography variant="h5" gutterBottom>
+                    <Box sx={{ width: '40%', padding: 2, display: 'flex', flexDirection: 'column' }}>
+                        <Typography variant="h5" gutterBottom sx={{ fontFamily: 'Fredoka', fontWeight: 500 }}>
                             {title}
                         </Typography>
                         <Typography variant='body1'>
-                            {description}
+                            {description.map((text, index) => (
+                                <Typography key={index} variant='body1' sx={{ marginBottom: 1 }}>
+                                    {text}
+                                </Typography>
+                            ))}
                         </Typography>
-                        <Typography variant='h5'>
-                            使用技術
+                        <Typography variant='h5' sx={{ fontFamily: 'Fredoka', fontWeight: 500 }}>
+                            使用言語など
                         </Typography>
                         <Typography variant='body1'>
                             {technologies}
                         </Typography>
-                        <Typography variant='h5'>
-                            {githubUrl}
-                        </Typography>
+                        <Box sx={{ justifyContent: 'center', marginTop: 'auto' }}>
+                            <UrlBox url={githubUrl} iconUrl='images/github_2111432.png' label='Github' />
+                        </Box>
                     </Box>
 
                     {/* 右側の写真部分 */}
@@ -56,18 +55,18 @@ const WorkItemDialog: React.FC<WorkItemDialogProps> = ({ open, onClose, imageSrc
                         </Box>
 
                         {/* 写真一覧 */}
-                        <Grid container spacing={1}>
+                        <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
                             {imageSrcList.map((image, index) => (
-                                <Grid item xs={4} key={index}>
+                                <Box key={index} sx={{ width: '80px', cursor: 'pointer' }}>
                                     <img
                                         src={image}
                                         alt={`sample-${index + 1}`}
-                                        style={{ width: '100%', cursor: 'pointer', border: selectedImage === image ? '2px solid blue' : 'none' }}
+                                        style={{ width: '100%', border: selectedImage === image ? '2px solid blue' : 'none' }}
                                         onClick={() => handleImageClick(image)}
                                     />
-                                </Grid>
+                                </Box>
                             ))}
-                        </Grid>
+                        </Box>
                     </Box>
                 </Box>
 

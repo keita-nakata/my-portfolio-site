@@ -2,39 +2,11 @@ import React, { useState } from 'react';
 import { Typography, Box } from '@mui/material';
 import WorkItem from './WorkItem';
 import WorkItemDialog from './WorkItemDialog';
-
-interface Work {
-    title: string;
-    imageSrc: string;
-    description: string;
-    technologies: string;
-    githubUrl: string;
-    imageList: string[];
-}
+import { works, Work } from '../data/worksData'; // データをインポート
 
 const Works: React.FC = () => {
     const [openDialog, setOpenDialog] = useState(false);
     const [selectedWork, setSelectedWork] = useState<Work | null>(null);
-
-    const works: Work[] = [
-        {
-            title: "Work 1",
-            imageSrc: "images/baseball.jpeg",
-            description: "Description of Work 1",
-            technologies: "Tech Stack for Work 1",
-            githubUrl: "https://github.com/work1",
-            imageList: ["images/running_1.jpeg", "images/running_2.jpeg", "images/running_3.jpeg"],
-        },
-        {
-            title: "Work 2",
-            imageSrc: "images/running_1.jpeg",
-            description: "Description of Work 2",
-            technologies: "Tech Stack for Work 2",
-            githubUrl: "https://github.com/work2",
-            imageList: ["images/running_2.jpeg", "images/running_3.jpeg"],
-        },
-        // 他の作品を追加
-    ];
 
     const handleOpenDialog = (work: Work) => {
         setSelectedWork(work);
