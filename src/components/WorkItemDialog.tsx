@@ -15,9 +15,18 @@ interface WorkItemDialogProps {
 
 const WorkItemDialog: React.FC<WorkItemDialogProps> = ({ open, onClose, imageSrcList, title, description, technologies, githubUrl }) => {
     const [selectedImage, setSelectedImage] = useState(imageSrcList[0]);
+    const [naturalWidth, setNaturalWidth] = useState(0);
+    const [naturalHeight, setNaturalHeight] = useState(0);
+
 
     const handleImageClick = (image: string) => {
         setSelectedImage(image);
+    };
+
+    const handleImageLoad = (event: React.SyntheticEvent<HTMLImageElement, Event>) => {
+        const { naturalWidth, naturalHeight } = event.currentTarget;
+        setNaturalWidth(naturalWidth);
+        setNaturalHeight(naturalHeight);
     };
 
     return (
@@ -48,10 +57,19 @@ const WorkItemDialog: React.FC<WorkItemDialogProps> = ({ open, onClose, imageSrc
                     </Box>
 
                     {/* 右側の写真部分 */}
-                    <Box sx={{ width: '55%', padding: 2, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                    <Box sx={{ width: '55%', padding: 3, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                         {/* 選択されている画像 */}
-                        <Box sx={{ width: '100%', height: '300px', marginBottom: 2 }}>
-                            <img src={selectedImage} alt="Selected" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                        <Box sx={{ 
+                            width: naturalWidth > naturalHeight ? '500px' : 'auto', 
+                            height: naturalWidth > naturalHeight ? 'auto' : '500px',  
+                            marginBottom: 2,
+                        }}>
+                            <img 
+                                src={selectedImage} 
+                                alt="Selected" 
+                                style={{ width: '100%', height: '100%', objectFit: 'contain' }} 
+                                onLoad={handleImageLoad}
+                            />
                         </Box>
 
                         {/* 写真一覧 */}

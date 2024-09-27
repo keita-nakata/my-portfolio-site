@@ -21,8 +21,8 @@ export interface Work {
 
 export const works: Work[] = [
     {
-        title: "ラーメンアドバイザーbot",
-        imageSrc: "images/baseball.jpeg",
+        title: "LINE ラーメンbot",
+        imageSrc: "images/works/ramen/ramenPrev.png",
         description: [
             "学部3年時、株式会社システムサーバー様（名古屋市）のインターンに参加。",
             "顔写真を送ると感情を推定し、その感情に合った周辺のラーメン店をレコメンドするLINEチャットボットを作成。",
@@ -31,7 +31,7 @@ export const works: Work[] = [
         ],
         technologies: "Google App Script, FaceAPI, ホットペッパーグルメAPI, LINE Messaging API",
         githubUrl: "https://github.com/work1",
-        imageList: ["images/running_1.jpeg", "images/running_2.jpeg", "images/running_3.jpeg", "images/running_3.jpeg", "images/running_3.jpeg"],
+        imageList: ["images/works/ramen/ramenAdviser_1.JPG", "images/works/ramen/ramenAdviser_2.JPG"],
     },
     {
         title: "Work 2",
