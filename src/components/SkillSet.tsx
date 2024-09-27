@@ -46,8 +46,8 @@ const SkillSet: React.FC = () => {
             margin: "100px 100px 0 100px",
             padding: 0,
         }}>
-            <Typography variant="h5" sx={{ fontFamily: 'Fredoka', fontWeight: 500, }}>SKILL SET</Typography>
-            <Typography variant="body1" sx={{ fontFamily: 'Fredoka', fontWeight: 500, }}>{description}</Typography>
+            <Typography variant="h4" sx={{ fontFamily: 'Fredoka', fontWeight: 500, marginBottom: "30px"}}>SKILL SET</Typography>
+            <Typography variant="body1" sx={{ fontFamily: 'Fredoka', fontWeight: 500, marginLeft: "30px"}}>{description}</Typography>
             <div>
                 <SkillBar data={Languages().data} title={Languages().title} />
                 <SkillBar data={FrameworkDB().data} title={FrameworkDB().title} backgroundColor='rgba(0, 0, 255, 0.1)' />

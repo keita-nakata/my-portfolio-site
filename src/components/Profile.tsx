@@ -3,6 +3,7 @@ import { Typography, Box } from '@mui/material';
 import BasicInfo from './BasicInfo';
 import SkillSet from './SkillSet';
 import Hobby from './Hobby';
+import Certification from './Certification';
 
 const Profile: React.FC = () => {
   return (
@@ -12,12 +13,12 @@ const Profile: React.FC = () => {
       display: 'flex', 
       flexDirection: 'column', 
       backgroundColor: '#f0f0f0',
-      // justifyContent: 'center', 
-      // alignItems: 'center' 
     }}>
+      <Typography variant="h4" sx={{ fontFamily: 'Fredoka', fontWeight: 500, letterSpacing: "0.1em", marginTop: '50px', textAlign: 'center' }}>ABOUT ME</Typography>
       <BasicInfo />
       <SkillSet />
       <Hobby />
+      <Certification />
     </Box>
   );
 };

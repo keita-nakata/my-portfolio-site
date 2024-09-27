@@ -55,7 +55,7 @@ const Hobby: React.FC = () => {
       margin: "100px 100px 0 100px",
       padding: 0,
     }}>
-      <Typography variant="h5" sx={{ fontFamily: 'Fredoka', fontWeight: 500, marginBottom: '50px' }}>HOBBY</Typography>
+      <Typography variant="h4" sx={{ fontFamily: 'Fredoka', fontWeight: 500, marginBottom: '50px' }}>HOBBY</Typography>
       <Box>
         <Box>
           <HobbyList />
