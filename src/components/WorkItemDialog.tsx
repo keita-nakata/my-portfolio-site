@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Dialog, DialogContent, Typography, Box, IconButton } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import UrlBox from './UrlBox';
+import githubLogo from '../assets/img/common/github_2111432.png';
 
 interface WorkItemDialogProps {
     open: boolean;
@@ -52,7 +53,7 @@ const WorkItemDialog: React.FC<WorkItemDialogProps> = ({ open, onClose, imageSrc
                             {technologies}
                         </Typography>
                         <Box sx={{ justifyContent: 'center', marginTop: '30px' }}>
-                            {githubUrl && <UrlBox url={githubUrl} iconUrl='src/assets/img/common/github_2111432.png' label='Github'/>}
+                            {githubUrl && <UrlBox url={githubUrl} iconUrl={githubLogo} label='Github'/>}
                         </Box>
                     </Box>
 
