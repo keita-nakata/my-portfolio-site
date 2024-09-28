@@ -1,3 +1,5 @@
+import baseballImage from '../assets/img/profile/baseball.jpeg';
+
 export interface Hobby {
     imageUrl: string;
     title: string;
@@ -7,7 +9,7 @@ export interface Hobby {
 
 export const hobbies: Hobby[] = [
     {
-        imageUrl: 'src/assets/img/profile/baseball.jpeg',
+        imageUrl: baseballImage,
         title: "Baseball",
         description: ["小学生1年生の時野球を始める。", "その後高校まで野球部、大学では軟式野球サークルに所属。", "巨人ファン一家に生まれた阪神ファン。ホームがアウェー。"],
         scale: 0.7,
