@@ -1,5 +1,6 @@
 import React from 'react';
 import { Typography, Box } from '@mui/material';
+import faceImage from '../assets/img/profile/face.jpeg';
 
 const BasicInfo: React.FC = () => {
     const name = "中田 啓太";
@@ -20,7 +21,7 @@ const BasicInfo: React.FC = () => {
             alignItems: 'center',
         }}>
             <Box>
-                <img src="src/assets/img/profile/face.jpeg" alt="Profile" style={{ width: 200, height: 200, borderRadius: 100, marginRight: 80 }} />
+                <img src={faceImage} alt="Profile" style={{ width: 200, height: 200, borderRadius: 100, marginRight: 80 }} />
             </Box>
             <Box>
                 <Typography variant="h4" sx={{ fontFamily: 'EB Garamond', fontWeight: 600, letterSpacing: "0.1em", marginBottom: 3 }}>{name}</Typography>

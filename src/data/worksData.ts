@@ -10,6 +10,25 @@ imageList: 作品の画像の（パスの）リスト。ダイアログで表示
 
 */
 
+
+// 画像をimportする
+import ramenPrev from '../assets/img/works/ramen-prev.png';
+import ramen1 from '../assets/img/works/ramen-adviser_1.jpg';
+import ramen2 from '../assets/img/works/ramen-adviser_2.jpg';
+import game1 from '../assets/img/works/game_1.png';
+import game2 from '../assets/img/works/game_2.png';
+import game3 from '../assets/img/works/game_3.png';
+import game4 from '../assets/img/works/game_4.png';
+import game5 from '../assets/img/works/game_5.png';
+import rainbowColors from '../assets/img/works/rainbow-colors-154569_640.png';
+import uecMap from '../assets/img/works/uec-map.png';
+import uecMap2 from '../assets/img/works/uec-map_2.png';
+import portfolioSite1 from '../assets/img/works/portfolio-site_1.png';
+import portfolioSite2 from '../assets/img/works/portfolio-site_2.png';
+import positiveImage from '../assets/img/works/young-woman-1722402_640.jpg';
+import m1Git from '../assets/img/works/fortnite-4129124_640.jpg';
+import construction from '../assets/img/common/construction.png';
+
 export interface Work {
     title: string;
     imageSrc: string;
@@ -22,7 +41,7 @@ export interface Work {
 export const works: Work[] = [
     {
         title: "LINE ラーメンbot",
-        imageSrc: "src/assets/img/works/ramen-prev.png",
+        imageSrc: ramenPrev,
         description: [
             "学部3年時、株式会社システムサーバー様（名古屋市）のインターンに参加。",
             "顔写真を送ると感情を推定し、その感情に合った周辺のラーメン店をレコメンドするLINEチャットボットを作成。",
@@ -31,11 +50,11 @@ export const works: Work[] = [
         ],
         technologies: "Google App Script, FaceAPI, ホットペッパーグルメAPI, LINE Messaging API",
         githubUrl: "", // あとで変更
-        imageList: ["src/assets/img/works/ramen-adviser_1.JPG", "src/assets/img/works/ramen-adviser_2.JPG"],
+        imageList: [ramen1, ramen2],
     },
     {
         title: "在室状況管理アプリ",
-        imageSrc: "src/assets/img/common/construction.png",
+        imageSrc: construction,
         description: [
             "現在研究室のメンバー2人と開発中。",
             "紙と磁石で管理している研究室の古き良き在室管理表を刷新するため奮闘中。",
@@ -44,11 +63,11 @@ export const works: Work[] = [
         ],
         technologies: "HTML, CSS, PHP, MySQL, Raspberry Pi, apache",
         githubUrl: "",
-        imageList: ["src/assets/img/common/construction.png",],
+        imageList: [construction,],
     },
     {
         title: "脱出ゲーム 『研究室からの脱出』",
-        imageSrc: "src/assets/img/works/game_5.png",
+        imageSrc: game5,
         description: [
             "ゲームを作って稼ぎたい、と思い立ち作り始めた。",
             "イラスト素材はすべて自作しているので、絵のクオリティには目を瞑って頂きたい。",
@@ -56,11 +75,11 @@ export const works: Work[] = [
         ],
         technologies: "Unity, C#, IrisPaint",
         githubUrl: "https://github.com/keita-nakata/EscapeRikei",
-        imageList: ["src/assets/img/works/game_2.png", "src/assets/img/works/game_5.png", "src/assets/img/works/game_1.png",  "src/assets/img/works/game_3.png", "src/assets/img/works/game_4.png",],
+        imageList: [game1, game2, game3, game4, game5],
     },
     {
         title: "色名教えてくれるニキ",
-        imageSrc: "src/assets/img/works/rainbow-colors-154569_640.png",
+        imageSrc: rainbowColors,
         description: [
             "色弱の人が色の名前を知るためのアプリ。",
             `「画面の〜色の部分」ということを他人から言われたりこちらから言ったりした時に、
@@ -74,11 +93,11 @@ export const works: Work[] = [
         ],
         technologies: "Python, OpenCV, CIEDE2000, Swift, Xcode",
         githubUrl: "https://github.com/work1",
-        imageList: ["src/assets/img/common/construction.png"],
+        imageList: [construction],
     },
     {
         title: "なんでも電通大マップ",
-        imageSrc: "src/assets/img/works/uec-map.png",
+        imageSrc: uecMap,
         description: [
             "「実システム創造」という講義で現在チームで開発中。",
             "キャンパス内の情報に特化し、建物名や施設名で検索できるだけでなく授業名からその開講場所をマップ上で表示する。",
@@ -87,11 +106,11 @@ export const works: Work[] = [
         ],
         technologies: "Kotlin, Android Studio",
         githubUrl: "",
-        imageList: ["src/assets/img/works/uec-map_2.png"],
+        imageList: [uecMap2],
     },
     {
         title: "ポートフォリオサイト",
-        imageSrc: "src/assets/img/works/portfolio-site_1.png",
+        imageSrc: portfolioSite1,
         description: [
             `このサイト。`,
             `React+TypeScriptで作成している。`,
@@ -100,11 +119,11 @@ export const works: Work[] = [
         ],
         technologies: "React, TypeScript, MUI, Recharts, Github Pages",
         githubUrl: "https://github.com/keita-nakata/my-portfolio-site",
-        imageList: ["src/assets/img/works/portfolio-site_1.png", "src/assets/img/works/portfolio-site_2.png"],
+        imageList: [portfolioSite1, portfolioSite2],
     },
     {
         title: "ポジティブになれるSNS 『ポジポジ』",
-        imageSrc: "src/assets/img/works/young-woman-1722402_640.jpg",
+        imageSrc: positiveImage,
         description: [
             "株式会社エムティーアイ様（東京都）のインターンにおいて作成。",
             `「ポジティブシンキングを身に着けて、人生をもっと良くしたい！」という人に焦点を当てたアプリ。
@@ -114,11 +133,11 @@ export const works: Work[] = [
         ],
         technologies: "Vue.js, AWS(S3, Lambda, API Gateway, DynamoDB), ",
         githubUrl: "https://github.com/keita-nakata/mti-intern",
-        imageList: ["src/assets/img/common/construction.png"],
+        imageList: [construction],
     },
     {
         title: "M1 Gゼミ",
-        imageSrc: "src/assets/img/works/fortnite-4129124_640.jpg",
+        imageSrc: m1Git,
         description: [
             "L4D2（Left for Dead 2）というゲームの配布ステージ情報を管理するWebサイト。多数のステージの中から難易度やクリア所要時間で検索・ソートできる。",
             `元々研究室の同期がExcelで管理していたが、情報が増えるにつれて管理が大変になってきたことと多くの人に使ってもらいたいという思いから開発を決意。
@@ -127,7 +146,7 @@ export const works: Work[] = [
         ],
         technologies: "React, TypeScript, MUI, Python, FastAPI",
         githubUrl: "https://github.com/work2",
-        imageList: ["src/assets/img/common/construction.png"],
+        imageList: [construction],
     },
     // 他の作品を追加
 ];
