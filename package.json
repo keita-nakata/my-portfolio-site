@@ -5,9 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "build": "vite build && cp -r dist docs",
+    "rebuild": "vite build && rm -R docs && cp -r dist docs",
+    "git": "git add . && git commit && git push origin main"
   },
   "dependencies": {
     "@emotion/react": "^11.13.3",
@@ -27,6 +29,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",
+    "@types/node": "^22.7.4",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@types/react-scroll": "^1.8.10",
