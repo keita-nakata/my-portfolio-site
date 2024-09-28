@@ -34,8 +34,77 @@ export const works: Work[] = [
         imageList: ["src/assets/img/works/ramen-adviser_1.JPG", "src/assets/img/works/ramen-adviser_2.JPG"],
     },
     {
+        title: "在室状況管理アプリ",
+        imageSrc: "src/assets/img/common/construction.png",
+        description: [
+            "現在研究室のメンバー2人と開発中。",
+            "紙と磁石で管理している研究室の古き良き在室管理表を刷新するため奮闘中。",
+            "各自のスマホのWi-Fi接続状況をarp-scanで取得し、登録されたMacアドレスと照合して在室状況を管理。",
+            "バックエンドの実装はすでに完了し、これからフロントエンドの実装に移る。",
+        ],
+        technologies: "HTML, CSS, PHP, MySQL, Raspberry Pi, apache",
+        githubUrl: "",
+        imageList: ["src/assets/img/common/construction.png",],
+    },
+    {
+        title: "脱出ゲーム 『研究室からの脱出』",
+        imageSrc: "src/assets/img/works/game_5.png",
+        description: [
+            "ゲームを作って稼ぎたい、と思い立ち作り始めた。",
+            "イラスト素材はすべて自作しているので、絵のクオリティには目を瞑って頂きたい。",
+            "あと少しで完成なのだが、最後の仕上げがなかなか進まない。ここまで来たら完成させたい。",
+        ],
+        technologies: "Unity, C#, IrisPaint",
+        githubUrl: "https://github.com/keita-nakata/EscapeRikei",
+        imageList: ["src/assets/img/works/game_2.png", "src/assets/img/works/game_5.png", "src/assets/img/works/game_1.png",  "src/assets/img/works/game_3.png", "src/assets/img/works/game_4.png",],
+    },
+    {
+        title: "色名教えてくれるニキ",
+        imageSrc: "src/assets/img/works/rainbow-colors-154569_640.png",
+        description: [
+            "色弱の人が色の名前を知るためのアプリ。",
+            `「画面の〜色の部分」ということを他人から言われたりこちらから言ったりした時に、
+            双方の色の認識が異なることが原因で話が噛み合わなくなることが多々あると色弱の友人から聞き、それを解決したいと思い開発を始めた。`,
+            `難しいのが、カラーコードと\"だいたいの\"色名をどう紐づけるか、という点であった。
+            実際に他人に色を言う時はもちろんカラーコードでは言わず、「黒っぽい」「濃い緑」など、\"だいたいの\"色名を言うことが多いと思われる。
+            一般的によく用いられるRGBやCMYKのユークリッド距離では実際の印象と異なる結果が返ってきたため、比較的新しい指標である\"CIEDE2000\"というものを採用した。
+            これはRGBなどより人間の色覚に合わせたものであるため、より実際の印象に近い色名を返すことができる。
+            これを用いたことで、より実生活に適したものになるよう心がけた。`,
+            "現状ではバックエンドの実装（画像+指定の座標からその色名を返す）まで実装できており、今後はフロントエンドを実装したい。",
+        ],
+        technologies: "Python, OpenCV, CIEDE2000, Swift, Xcode",
+        githubUrl: "https://github.com/work1",
+        imageList: ["src/assets/img/common/construction.png"],
+    },
+    {
+        title: "なんでも電通大マップ",
+        imageSrc: "src/assets/img/works/uec-map.png",
+        description: [
+            "「実システム創造」という講義で現在チームで開発中。",
+            "キャンパス内の情報に特化し、建物名や施設名で検索できるだけでなく授業名からその開講場所をマップ上で表示する。",
+            "さらに、ユーザーが各自で拡張マップを作成・追加できる機能も搭載し、学内のイベントなどにも臨機応変に対応。",
+            "将来的には、学食のメニューや待ち時間などの情報も提供できるよう拡張したいと考えている。",
+        ],
+        technologies: "Kotlin, Android Studio",
+        githubUrl: "",
+        imageList: ["src/assets/img/works/uec-map_2.png"],
+    },
+    {
+        title: "ポートフォリオサイト",
+        imageSrc: "src/assets/img/works/portfolio-site_1.png",
+        description: [
+            `このサイト。`,
+            `React+TypeScriptで作成している。`,
+            `シンプルでおしゃれなデザインにすることを目標として、コンポーネント間の余白や文字サイズ、画像サイズなどは細部までこだわった。`,
+            `多くのUIを引数で内容を調整できるコンポーネントとして実装しており、汎用的に使えるものにするよう心がけた。`,
+        ],
+        technologies: "React, TypeScript, MUI, Recharts, Github Pages",
+        githubUrl: "https://github.com/keita-nakata/my-portfolio-site",
+        imageList: ["src/assets/img/works/portfolio-site_1.png", "src/assets/img/works/portfolio-site_2.png"],
+    },
+    {
         title: "ポジティブになれるSNS 『ポジポジ』",
-        imageSrc: "images/running_1.png",
+        imageSrc: "src/assets/img/works/young-woman-1722402_640.jpg",
         description: [
             "株式会社エムティーアイ様（東京都）のインターンにおいて作成。",
             `「ポジティブシンキングを身に着けて、人生をもっと良くしたい！」という人に焦点を当てたアプリ。
@@ -45,79 +114,20 @@ export const works: Work[] = [
         ],
         technologies: "Vue.js, AWS(S3, Lambda, API Gateway, DynamoDB), ",
         githubUrl: "https://github.com/keita-nakata/mti-intern",
-        imageList: ["images/running_2.jpeg", "images/running_3.jpeg"],
-    },
-    {
-        title: "在室状況管理アプリ",
-        imageSrc: "images/baseball.jpeg",
-        description: [
-            "現在研究室のメンバー2人と開発中。",
-            "紙と磁石で管理している研究室の古き良き在室管理表を刷新するため奮闘中。",
-            "Wi-Fiの接続状況をarp-scanで取得し、登録されたMacアドレスと照合して在室状況を管理。",
-            "バックエンドの実装はすでに完了し、これからフロントエンドの実装に移る。",
-        ],
-        technologies: "HTML, CSS, PHP, MySQL, Raspberry Pi, apache",
-        githubUrl: "",
-        imageList: ["images/running_2.jpeg", "images/running_3.jpeg",],
-    },
-    {
-        title: "脱出ゲーム 『研究室からの脱出』",
-        imageSrc: "images/running_1.jpeg",
-        description: [
-            "Work 2 Description 1",
-            "Work 2 Description 2",
-            "Work 2 Description 3",
-        ],
-        technologies: "Unity, C#",
-        githubUrl: "https://github.com/work2",
-        imageList: ["images/running_2.jpeg", "images/running_3.jpeg"],
-    },
-    {
-        title: "色名教えてくれるニキ",
-        imageSrc: "src/assets/img/works/rainbow-colors-154569_640.png",
-        description: [
-            "",
-        ],
-        technologies: "Google App Script, FaceAPI, ホットペッパーグルメAPI, LINE Messaging API",
-        githubUrl: "https://github.com/work1",
-        imageList: ["images/running_1.jpeg", "images/running_2.jpeg", "images/running_3.jpeg", "images/running_3.jpeg", "images/running_3.jpeg"],
-    },
-    {
-        title: "なんでも電通大マップ",
-        imageSrc: "images/running_1.jpeg",
-        description: [
-            "Work 2 Description 1",
-            "Work 2 Description 2",
-            "Work 2 Description 3",
-        ],
-        technologies: "Tech Stack for Work 2",
-        githubUrl: "",
-        imageList: ["images/running_2.jpeg", "images/running_3.jpeg"],
-    },
-    {
-        title: "ポートフォリオサイト",
-        imageSrc: "src/assets/img/works/portfolio-site_1.png",
-        description: [
-            "学部3年時、株式会社システムサーバー様（名古屋市）のインターンに参加。",
-            "顔写真を送ると感情を推定し、その感情に合った周辺のラーメン店をレコメンドするLINEチャットボットを作成。",
-            "感情検出にはFaceAPI、ラーメン店検索にはホットペッパーグルメAPIを使用。",
-            "感情とラーメン店をどのように紐づけるかが課題で、感情ごとに複数の単語を設定し、お店の紹介文に含まれている単語をカウントして一番多い感情にお店を分類する方式を採用。"
-        ],
-        technologies: "Google App Script, FaceAPI, ホットペッパーグルメAPI, LINE Messaging API",
-        githubUrl: "https://github.com/work1",
-        imageList: ["images/running_1.jpeg", "images/running_2.jpeg", "images/running_3.jpeg", "images/running_3.jpeg", "images/running_3.jpeg"],
+        imageList: ["src/assets/img/common/construction.png"],
     },
     {
         title: "M1 Gゼミ",
-        imageSrc: "images/running_1.jpeg",
+        imageSrc: "src/assets/img/works/fortnite-4129124_640.jpg",
         description: [
-            "Work 2 Description 1",
-            "Work 2 Description 2",
-            "Work 2 Description 3",
+            "L4D2（Left for Dead 2）というゲームの配布ステージ情報を管理するWebサイト。多数のステージの中から難易度やクリア所要時間で検索・ソートできる。",
+            `元々研究室の同期がExcelで管理していたが、情報が増えるにつれて管理が大変になってきたことと多くの人に使ってもらいたいという思いから開発を決意。
+            現在自分を含む同期5人で開発中。自分はフロントエンド:テーブル表示部分を担当し、ReactとTypeScriptを用いて開発している。`,
+            "",
         ],
-        technologies: "Tech Stack for Work 2",
+        technologies: "React, TypeScript, MUI, Python, FastAPI",
         githubUrl: "https://github.com/work2",
-        imageList: ["images/running_2.jpeg", "images/running_3.jpeg"],
+        imageList: ["src/assets/img/common/construction.png"],
     },
     // 他の作品を追加
 ];
