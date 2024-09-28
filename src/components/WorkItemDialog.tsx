@@ -75,11 +75,11 @@ const WorkItemDialog: React.FC<WorkItemDialogProps> = ({ open, onClose, imageSrc
                         {/* 写真一覧 */}
                         <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
                             {imageSrcList.map((image, index) => (
-                                <Box key={index} sx={{ width: '80px', cursor: 'pointer' }}>
+                                <Box key={index} sx={{ width: '50px', height: '50px', cursor: 'pointer' }}>
                                     <img
                                         src={image}
                                         alt={`sample-${index + 1}`}
-                                        style={{ width: '100%', border: selectedImage === image ? '2px solid blue' : 'none' }}
+                                        style={{ width: '100%', height: '100%', border: selectedImage === image ? '2px solid blue' : 'none', objectFit: 'cover' }}
                                         onClick={() => handleImageClick(image)}
                                     />
                                 </Box>
