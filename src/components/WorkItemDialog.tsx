@@ -45,19 +45,19 @@ const WorkItemDialog: React.FC<WorkItemDialogProps> = ({ open, onClose, imageSrc
                                 </Typography>
                             ))}
                         </Typography>
-                        <Typography variant='h5' sx={{ fontFamily: 'Fredoka', fontWeight: 600 }}>
+                        <Typography variant='h5' sx={{ fontFamily: 'Fredoka', fontWeight: 600, marginTop: '30px' }}>
                             使用言語・ツール
                         </Typography>
                         <Typography variant='body1'>
                             {technologies}
                         </Typography>
-                        <Box sx={{ justifyContent: 'center', marginTop: 'auto' }}>
+                        <Box sx={{ justifyContent: 'center', marginTop: '30px' }}>
                             {githubUrl && <UrlBox url={githubUrl} iconUrl='src/assets/img/common/github_2111432.png' label='Github'/>}
                         </Box>
                     </Box>
 
                     {/* 右側の写真部分 */}
-                    <Box sx={{ width: '55%', padding: 3, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                    <Box sx={{ width: '55%', padding: 3, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
                         {/* 選択されている画像 */}
                         <Box sx={{ 
                             width: naturalWidth > naturalHeight ? '500px' : 'auto', 
