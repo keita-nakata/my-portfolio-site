@@ -46,10 +46,11 @@ export const works: Work[] = [
             "学部3年時、株式会社システムサーバー様（名古屋市）のインターンに参加。",
             "顔写真を送ると感情を推定し、その感情に合った周辺のラーメン店をレコメンドするLINEチャットボットを作成。",
             "感情検出にはFaceAPI、ラーメン店検索にはホットペッパーグルメAPIを使用。",
-            "感情とラーメン店をどのように紐づけるかが課題であった。感情ごとに複数の単語を設定し、お店の紹介文に含まれている単語をカウントして一番多い感情にお店を分類することで課題を解決。"
+            "感情とラーメン店をどのように紐づけるかが課題であった。感情ごとに複数の単語を設定し、お店の紹介文に含まれている単語をカウントして一番多い感情にお店を分類することで課題を解決。",
+            "FaceAPIの感情分析機能の廃止に伴い、GoogleCloudVisionAPIへの移行を試みたがややこしくて断念...",
         ],
         technologies: "Google App Script, FaceAPI, ホットペッパーグルメAPI, LINE Messaging API",
-        githubUrl: "", // あとで変更
+        githubUrl: "https://github.com/keita-nakata/ramen-bot",
         imageList: [ramen1, ramen2],
     },
     {
