@@ -9,7 +9,7 @@ const SkillSet: React.FC = () => {
     const Languages = () => {
         return {
             data: [
-                { name: 'Python', value: 3 },
+                { name: 'Python', value: 2 },
                 { name: 'JS/TS/GAS', value: 2 },
                 { name: 'C/C++', value: 2 },
                 { name: 'PHP', value: 1 },
@@ -21,7 +21,7 @@ const SkillSet: React.FC = () => {
     const FrameworkDB = () => {
         return {
             data: [
-                { name: 'React', value: 3 },
+                { name: 'React', value: 2 },
                 { name: 'Vue.js', value: 1 },
                 { name: 'MySQL', value: 1 },
             ],
