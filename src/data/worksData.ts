@@ -28,6 +28,9 @@ import portfolioSite2 from '../assets/img/works/portfolio-site_2.png';
 import positiveImage from '../assets/img/works/young-woman-1722402_640.jpg';
 import m1Git from '../assets/img/works/fortnite-4129124_640.jpg';
 import construction from '../assets/img/common/construction.png';
+import favimakerPrev from '../assets/img/works/favimaker-preview.png';
+import favimaker1 from '../assets/img/works/favimaker_1.png';
+import favimaker2 from '../assets/img/works/favimaker_2.png';
 
 export interface Work {
     title: string;
@@ -39,6 +42,22 @@ export interface Work {
 }
 
 export const works: Work[] = [
+    {
+        title: "One Punch favicon",
+        imageSrc: favimakerPrev,
+        description: [
+            `faviconの設定に必要なファイルを一度に生成するツール。`,
+            `ポートフォリオサイトのfaviconを設定しようとした時、複数のpngファイルやicoファイルを用意しなければいけないことを初めて知った。,
+            それを1つ1つ作るのが非常に面倒だったため、そのファイルセットを一発で作成できるサイトを作成。`,
+            `アップロードされた画像データはバックエンドで様々な形式に変換した後、aws s3に保存。
+            その後、生成されたURLをフロントエンドに返し、ユーザーがダウンロードできるようにした。
+            s3に保存されたファイルは一定期間で削除されるように設定している。`,
+            `サーバーレスに移行しようとしたが上手くいかず、一旦ローカルに置いている。`,
+        ],
+        technologies: "React, TypeScript, Node.js, Python, FastAPI, AWS(S3)",
+        githubUrl: "https://github.com/keita-nakata/one-punch-favicon",
+        imageList: [favimakerPrev, favimaker1, favimaker2],
+    },
     {
         title: "LINE ラーメンbot",
         imageSrc: ramenPrev,
