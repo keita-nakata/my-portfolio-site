@@ -32,6 +32,8 @@ import favimakerPrev from '../assets/img/works/favimaker-preview.png';
 import favimaker1 from '../assets/img/works/favimaker_1.png';
 import favimaker2 from '../assets/img/works/favimaker_2.png';
 import osm1 from '../assets/img/works/osm_prototype.png';
+import nicebuddy1 from '../assets/img/works/nicebuddy_1.png';
+import nicebuddy2 from '../assets/img/works/nicebuddy_2.png';
 
 export interface Work {
     title: string;
@@ -55,6 +57,18 @@ export const works: Work[] = [
         technologies: "React, TypeScript, MUI, Recharts, Github Pages",
         githubUrl: "https://github.com/keita-nakata/my-portfolio-site",
         imageList: [portfolioSite1, portfolioSite2],
+    },
+    {
+        title: "Nice Buddy",
+        imageSrc: nicebuddy2,
+        description: [
+            `PKSHA Technologyの生成AIハッカソンで作成。`,
+            `現在の画面情報を取得し、それをもとにAIが会話形式で回答する。`,
+            ``,
+        ],
+        technologies: "React, TypeScript, MUI, Python, FastAPI, OpenAI API",
+        githubUrl: "",
+        imageList: [nicebuddy1, nicebuddy2],
     },
     {
         title: "One Punch favicon",
