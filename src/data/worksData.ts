@@ -31,6 +31,7 @@ import construction from '../assets/img/common/construction.png';
 import favimakerPrev from '../assets/img/works/favimaker-preview.png';
 import favimaker1 from '../assets/img/works/favimaker_1.png';
 import favimaker2 from '../assets/img/works/favimaker_2.png';
+import osm1 from '../assets/img/works/osm_prototype.png';
 
 export interface Work {
     title: string;
@@ -42,6 +43,19 @@ export interface Work {
 }
 
 export const works: Work[] = [
+    {
+        title: "ポートフォリオサイト",
+        imageSrc: portfolioSite1,
+        description: [
+            `このサイト。`,
+            `React+TypeScriptで作成している。`,
+            `シンプルでおしゃれなデザインにすることを目標として、コンポーネント間の余白や文字サイズ、画像サイズなどは細部までこだわった。`,
+            `多くのUIを引数で内容を調整できるコンポーネントとして実装しており、汎用的に使えるものにするよう心がけた。`,
+        ],
+        technologies: "React, TypeScript, MUI, Recharts, Github Pages",
+        githubUrl: "https://github.com/keita-nakata/my-portfolio-site",
+        imageList: [portfolioSite1, portfolioSite2],
+    },
     {
         title: "One Punch favicon",
         imageSrc: favimakerPrev,
@@ -74,7 +88,7 @@ export const works: Work[] = [
     },
     {
         title: "在室状況管理アプリ",
-        imageSrc: construction,
+        imageSrc: osm1,
         description: [
             "現在研究室のメンバー2人と開発中。",
             "紙と磁石で管理している研究室の古き良き在室管理表を刷新するため奮闘中。",
@@ -83,7 +97,7 @@ export const works: Work[] = [
         ],
         technologies: "HTML, CSS, PHP, MySQL, Raspberry Pi, apache",
         githubUrl: "",
-        imageList: [construction,],
+        imageList: [osm1,],
     },
     {
         title: "脱出ゲーム 『研究室からの脱出』",
@@ -98,7 +112,7 @@ export const works: Work[] = [
         imageList: [game1, game2, game3, game4, game5],
     },
     {
-        title: "色名教えてくれるニキ",
+        title: "色弱支援アプリ",
         imageSrc: rainbowColors,
         description: [
             "色弱の人が色の名前を知るためのアプリ。",
@@ -127,19 +141,6 @@ export const works: Work[] = [
         technologies: "Kotlin, Android Studio",
         githubUrl: "",
         imageList: [uecMap2],
-    },
-    {
-        title: "ポートフォリオサイト",
-        imageSrc: portfolioSite1,
-        description: [
-            `このサイト。`,
-            `React+TypeScriptで作成している。`,
-            `シンプルでおしゃれなデザインにすることを目標として、コンポーネント間の余白や文字サイズ、画像サイズなどは細部までこだわった。`,
-            `多くのUIを引数で内容を調整できるコンポーネントとして実装しており、汎用的に使えるものにするよう心がけた。`,
-        ],
-        technologies: "React, TypeScript, MUI, Recharts, Github Pages",
-        githubUrl: "https://github.com/keita-nakata/my-portfolio-site",
-        imageList: [portfolioSite1, portfolioSite2],
     },
     {
         title: "ポジティブになれるSNS 『ポジポジ』",
