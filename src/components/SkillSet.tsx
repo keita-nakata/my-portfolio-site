@@ -12,8 +12,7 @@ const SkillSet: React.FC = () => {
                 { name: 'Python', value: 2 },
                 { name: 'JS/TS/GAS', value: 2 },
                 { name: 'C/C++', value: 2 },
-                { name: 'PHP', value: 1 },
-                { name: 'C#', value: 1 },
+                { name: 'PHP/Ruby/C#', value: 1 },
             ],
             title: "言語"
         };
