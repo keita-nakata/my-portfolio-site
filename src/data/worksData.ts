@@ -26,7 +26,6 @@ import uecMap2 from '../assets/img/works/uec-map_2.png';
 import portfolioSite1 from '../assets/img/works/portfolio-site_1.png';
 import portfolioSite2 from '../assets/img/works/portfolio-site_2.png';
 import positiveImage from '../assets/img/works/young-woman-1722402_640.jpg';
-import m1Git from '../assets/img/works/fortnite-4129124_640.jpg';
 import construction from '../assets/img/common/construction.png';
 import favimakerPrev from '../assets/img/works/favimaker-preview.png';
 import favimaker1 from '../assets/img/works/favimaker_1.png';
@@ -37,6 +36,7 @@ import nicebuddy2 from '../assets/img/works/nicebuddy_2.png';
 import nicebuddy3 from '../assets/img/works/nicebuddy_3.png';
 import nicebuddy4 from '../assets/img/works/nicebuddy_4.png';
 import l4d2_1 from '../assets/img/works/l4d2_1.png';
+import l4d2_2 from '../assets/img/works/l4d2_2.png';
 
 export interface Work {
     title: string;
@@ -118,6 +118,19 @@ export const works: Work[] = [
         imageList: [osm1,],
     },
     {
+        title: "ゲーム拡張マップまとめサイト",
+        imageSrc: l4d2_2,
+        description: [
+            "L4D2（Left for Dead 2）というゲームの配布ステージ情報を管理するWebサイト。多数のステージの中から名前、難易度、おすすめ度など多数の要素で検索・ソートできる。",
+            `元々研究室の同期がExcelで管理していたが、情報が増えるにつれて管理が大変になってきたことと多くの人に使ってもらいたいという思いから開発を決意。
+            現在自分を含む同期5人で開発中。自分はフロントエンドのテーブル表示部分を担当し、ReactとTypeScriptを用いて開発している。`,
+            "",
+        ],
+        technologies: "React, TypeScript, MUI, Python, FastAPI",
+        githubUrl: "",
+        imageList: [l4d2_1, l4d2_2],
+    },
+    {
         title: "脱出ゲーム 『研究室からの脱出』",
         imageSrc: game5,
         description: [
@@ -159,19 +172,6 @@ export const works: Work[] = [
         technologies: "Kotlin, Android Studio",
         githubUrl: "",
         imageList: [uecMap2],
-    },
-    {
-        title: "ゲーム拡張マップまとめサイト",
-        imageSrc: m1Git,
-        description: [
-            "L4D2（Left for Dead 2）というゲームの配布ステージ情報を管理するWebサイト。多数のステージの中から名前、難易度、おすすめ度など多数の要素で検索・ソートできる。",
-            `元々研究室の同期がExcelで管理していたが、情報が増えるにつれて管理が大変になってきたことと多くの人に使ってもらいたいという思いから開発を決意。
-            現在自分を含む同期5人で開発中。自分はフロントエンドのテーブル表示部分を担当し、ReactとTypeScriptを用いて開発している。`,
-            "",
-        ],
-        technologies: "React, TypeScript, MUI, Python, FastAPI",
-        githubUrl: "https://github.com/work2",
-        imageList: [l4d2_1],
     },
     {
         title: "ポジティブになれるSNS 『ポジポジ』",
