@@ -34,6 +34,9 @@ import favimaker2 from '../assets/img/works/favimaker_2.png';
 import osm1 from '../assets/img/works/osm_prototype.png';
 import nicebuddy1 from '../assets/img/works/nicebuddy_1.png';
 import nicebuddy2 from '../assets/img/works/nicebuddy_2.png';
+import nicebuddy3 from '../assets/img/works/nicebuddy_3.png';
+import nicebuddy4 from '../assets/img/works/nicebuddy_4.png';
+import l4d2_1 from '../assets/img/works/l4d2_1.png';
 
 export interface Work {
     title: string;
@@ -62,13 +65,14 @@ export const works: Work[] = [
         title: "Nice Buddy",
         imageSrc: nicebuddy2,
         description: [
-            `PKSHA Technologyの生成AIハッカソンで作成。`,
-            `現在の画面情報を取得し、それをもとにAIが会話形式で回答する。`,
-            ``,
+            `2024年11月現在、PKSHA Technology様主催の生成AIハッカソンで作成中。`,
+            `簡単に言うと、画面を見ながら教えてくれるAIアシスタント。OpenAIのchatAPIとAudioAPIを使用し、生成した回答を音声でフィードバックする。`,
+            `さらに、ソースコードなどが回答に含まれるときはコード部分を音声部分と分けて生成され、ユーザーには音声+コード部分のテキストとしてフィードバックされる。`,
+            `また、音声入力の内容からスクリーン情報の必要性をAIに判断させ、必要なら自動でスクリーンショットを撮影してその情報をもとに回答する。`,
         ],
         technologies: "React, TypeScript, MUI, Python, FastAPI, OpenAI API",
         githubUrl: "",
-        imageList: [nicebuddy1, nicebuddy2],
+        imageList: [nicebuddy1, nicebuddy2, nicebuddy3, nicebuddy4],
     },
     {
         title: "One Punch favicon",
@@ -144,7 +148,7 @@ export const works: Work[] = [
         imageList: [construction],
     },
     {
-        title: "なんでも電通大マップ",
+        title: "電通大なんでもマップ",
         imageSrc: uecMap,
         description: [
             "「実システム創造」という講義で現在チームで開発中。",
@@ -155,6 +159,19 @@ export const works: Work[] = [
         technologies: "Kotlin, Android Studio",
         githubUrl: "",
         imageList: [uecMap2],
+    },
+    {
+        title: "ゲーム拡張マップまとめサイト",
+        imageSrc: m1Git,
+        description: [
+            "L4D2（Left for Dead 2）というゲームの配布ステージ情報を管理するWebサイト。多数のステージの中から名前、難易度、おすすめ度など多数の要素で検索・ソートできる。",
+            `元々研究室の同期がExcelで管理していたが、情報が増えるにつれて管理が大変になってきたことと多くの人に使ってもらいたいという思いから開発を決意。
+            現在自分を含む同期5人で開発中。自分はフロントエンドのテーブル表示部分を担当し、ReactとTypeScriptを用いて開発している。`,
+            "",
+        ],
+        technologies: "React, TypeScript, MUI, Python, FastAPI",
+        githubUrl: "https://github.com/work2",
+        imageList: [l4d2_1],
     },
     {
         title: "ポジティブになれるSNS 『ポジポジ』",
@@ -170,18 +187,6 @@ export const works: Work[] = [
         githubUrl: "https://github.com/keita-nakata/mti-intern",
         imageList: [construction],
     },
-    {
-        title: "M1 Gゼミ",
-        imageSrc: m1Git,
-        description: [
-            "L4D2（Left for Dead 2）というゲームの配布ステージ情報を管理するWebサイト。多数のステージの中から難易度やクリア所要時間で検索・ソートできる。",
-            `元々研究室の同期がExcelで管理していたが、情報が増えるにつれて管理が大変になってきたことと多くの人に使ってもらいたいという思いから開発を決意。
-            現在自分を含む同期5人で開発中。自分はフロントエンド:テーブル表示部分を担当し、ReactとTypeScriptを用いて開発している。`,
-            "",
-        ],
-        technologies: "React, TypeScript, MUI, Python, FastAPI",
-        githubUrl: "https://github.com/work2",
-        imageList: [construction],
-    },
+    
     // 他の作品を追加
 ];
