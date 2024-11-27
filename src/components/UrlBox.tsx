@@ -15,8 +15,8 @@ const UrlBox: React.FC<UrlBoxProps> = ({ url, iconUrl, label }) => {
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    width: 150, // 横幅を小さく調整
-                    padding: 1,
+                    width: 'auto', // 横幅を小さく調整
+                    padding: '8px 20px',
                     borderRadius: 5,
                     border: '1px solid #ccc',
                     cursor: 'pointer',
@@ -33,7 +33,7 @@ const UrlBox: React.FC<UrlBoxProps> = ({ url, iconUrl, label }) => {
 
                 {/* 右側の説明文 */}
                 <Box>
-                    <Typography variant="h6" color="textPrimary">
+                    <Typography variant="body1" color="textPrimary">
                         {label}
                     </Typography>
                 </Box>

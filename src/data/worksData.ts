@@ -10,7 +10,6 @@ imageList: 作品の画像の（パスの）リスト。ダイアログで表示
 
 */
 
-
 // 画像をimportする
 import ramenPrev from '../assets/img/works/ramen-prev.png';
 import ramen1 from '../assets/img/works/ramen-adviser_1.jpg';
@@ -30,7 +29,7 @@ import construction from '../assets/img/common/construction.png';
 import favimakerPrev from '../assets/img/works/favimaker-preview.png';
 import favimaker1 from '../assets/img/works/favimaker_1.png';
 import favimaker2 from '../assets/img/works/favimaker_2.png';
-import osm1 from '../assets/img/works/osm_prototype.png';
+import osms1 from '../assets/img/works/osms_1.png';
 import nicebuddy1 from '../assets/img/works/nicebuddy_1.png';
 import nicebuddy2 from '../assets/img/works/nicebuddy_2.png';
 import nicebuddy3 from '../assets/img/works/nicebuddy_3.png';
@@ -44,6 +43,7 @@ export interface Work {
     description: string[];
     technologies: string;
     githubUrl: string;
+    publicUrl: string;
     imageList: string[];
 }
 
@@ -59,19 +59,21 @@ export const works: Work[] = [
         ],
         technologies: "React, TypeScript, MUI, Recharts, Github Pages",
         githubUrl: "https://github.com/keita-nakata/my-portfolio-site",
+        publicUrl: "https://keita-nakata.github.io/my-portfolio-site/",
         imageList: [portfolioSite1, portfolioSite2],
     },
     {
-        title: "Nice Buddy",
+        title: "【ハッカソン最優秀賞】Nice Buddy",
         imageSrc: nicebuddy2,
         description: [
-            `2024年11月現在、PKSHA Technology様主催の生成AIハッカソンで作成中。`,
-            `簡単に言うと、画面を見ながら教えてくれるAIアシスタント。OpenAIのchatAPIとAudioAPIを使用し、生成した回答を音声でフィードバックする。`,
+            `2024年10~11月開催のPKSHA Technology様主催の生成AIハッカソンで最優秀賞を頂いたプロダクト。`,
+            `簡単に言うと、画面を見ながら教えてくれるAIアシスタント。OpenAIのChatAPIとAudioAPIを使用し、生成した回答を音声でフィードバックする。`,
             `さらに、ソースコードなどが回答に含まれるときはコード部分を音声部分と分けて生成され、ユーザーには音声+コード部分のテキストとしてフィードバックされる。`,
             `また、音声入力の内容からスクリーン情報の必要性をAIに判断させ、必要なら自動でスクリーンショットを撮影してその情報をもとに回答する。`,
         ],
         technologies: "React, TypeScript, MUI, Python, FastAPI, OpenAI API",
-        githubUrl: "",
+        githubUrl: "https://github.com/KimuraAkikazu/Nice-Buddy",
+        publicUrl: "",
         imageList: [nicebuddy1, nicebuddy2, nicebuddy3, nicebuddy4],
     },
     {
@@ -88,6 +90,7 @@ export const works: Work[] = [
         ],
         technologies: "React, TypeScript, Node.js, Python, FastAPI, AWS(S3)",
         githubUrl: "https://github.com/keita-nakata/one-punch-favicon",
+        publicUrl: "https://one-punch-favicon.vercel.app/",
         imageList: [favimakerPrev, favimaker1, favimaker2],
     },
     {
@@ -102,11 +105,12 @@ export const works: Work[] = [
         ],
         technologies: "Google App Script, FaceAPI, ホットペッパーグルメAPI, LINE Messaging API",
         githubUrl: "https://github.com/keita-nakata/ramen-bot",
+        publicUrl: "",
         imageList: [ramen1, ramen2],
     },
     {
-        title: "在室状況管理アプリ",
-        imageSrc: osm1,
+        title: "研究室 在室状況管理システム",
+        imageSrc: osms1,
         description: [
             "現在研究室のメンバー2人と開発中。",
             "紙と磁石で管理している研究室の古き良き在室管理表を刷新するため奮闘中。",
@@ -115,7 +119,8 @@ export const works: Work[] = [
         ],
         technologies: "HTML, CSS, PHP, MySQL, Raspberry Pi, apache",
         githubUrl: "",
-        imageList: [osm1,],
+        publicUrl: "",
+        imageList: [osms1,],
     },
     {
         title: "ゲーム拡張マップまとめサイト",
@@ -128,6 +133,7 @@ export const works: Work[] = [
         ],
         technologies: "React, TypeScript, MUI, Python, FastAPI",
         githubUrl: "",
+        publicUrl: "",
         imageList: [l4d2_1, l4d2_2],
     },
     {
@@ -140,6 +146,7 @@ export const works: Work[] = [
         ],
         technologies: "Unity, C#, IrisPaint",
         githubUrl: "https://github.com/keita-nakata/EscapeRikei",
+        publicUrl: "",
         imageList: [game1, game2, game3, game4, game5],
     },
     {
@@ -158,6 +165,7 @@ export const works: Work[] = [
         ],
         technologies: "Python, OpenCV, CIEDE2000, Swift, Xcode",
         githubUrl: "https://github.com/work1",
+        publicUrl: "",
         imageList: [construction],
     },
     {
@@ -171,6 +179,7 @@ export const works: Work[] = [
         ],
         technologies: "Kotlin, Android Studio",
         githubUrl: "",
+        publicUrl: "",
         imageList: [uecMap2],
     },
     {
@@ -185,6 +194,7 @@ export const works: Work[] = [
         ],
         technologies: "Vue.js, AWS(S3, Lambda, API Gateway, DynamoDB), ",
         githubUrl: "https://github.com/keita-nakata/mti-intern",
+        publicUrl: "",
         imageList: [construction],
     },
     
