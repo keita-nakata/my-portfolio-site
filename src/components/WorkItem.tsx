@@ -19,6 +19,11 @@ const WorkItem: React.FC<WorkItemProps> = ({ imageSrc, title, onClick }) => {
                 borderRadius: '10px',
                 boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)',
                 backgroundColor: 'white',
+                '&:hover': {
+                    cursor: 'pointer',
+                    transform: 'scale(1.05)',
+                    transition: '0.3s',
+                },
             }}>
             <Box margin={1}>
                 <img src={imageSrc} alt={title} style={{ width: '400px', height: '300px', objectFit: 'cover' }} />
