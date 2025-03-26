@@ -4,6 +4,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import UrlBox from './UrlBox';
 import githubLogo from '../assets/img/common/github_2111432.png';
 import publicLogo from '../assets/img/common/globe.png';
+import slideLogo from '../assets/img/common/presentation.png';
 
 interface WorkItemDialogProps {
     open: boolean;
@@ -14,9 +15,10 @@ interface WorkItemDialogProps {
     technologies: string;
     githubUrl?: string;
     publicUrl?: string;
+    slideUrl?: string;
 }
 
-const WorkItemDialog: React.FC<WorkItemDialogProps> = ({ open, onClose, imageSrcList, title, description, technologies, githubUrl="", publicUrl="" }) => {
+const WorkItemDialog: React.FC<WorkItemDialogProps> = ({ open, onClose, imageSrcList, title, description, technologies, githubUrl="", publicUrl="", slideUrl="" }) => {
     const [selectedImage, setSelectedImage] = useState(imageSrcList[0]);
     const [naturalWidth, setNaturalWidth] = useState(0);
     const [naturalHeight, setNaturalHeight] = useState(0);
@@ -57,6 +59,7 @@ const WorkItemDialog: React.FC<WorkItemDialogProps> = ({ open, onClose, imageSrc
                         <Box sx={{ justifyContent: 'flex-start', marginTop: '30px', display: 'flex', flexDirection: 'row', gap: '8px' }}>
                             {githubUrl && <UrlBox url={githubUrl} iconUrl={githubLogo} label='Github'/>}
                             {publicUrl && <UrlBox url={publicUrl} iconUrl={publicLogo} label='Web'/>}
+                            {slideUrl && <UrlBox url={slideUrl} iconUrl={slideLogo} label='Slide'/>}
                         </Box>
                     </Box>
 

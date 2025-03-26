@@ -67,6 +67,7 @@ const Works: React.FC = () => {
                     technologies={selectedWork.technologies}
                     githubUrl={selectedWork.githubUrl}
                     publicUrl={selectedWork.publicUrl}
+                    slideUrl={selectedWork.slideUrl}
                 />
             )}
         </Box>
