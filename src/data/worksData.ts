@@ -11,32 +11,32 @@ imageList: 作品の画像の（パスの）リスト。ダイアログで表示
 */
 
 // 画像をimportする
-import ramenPrev from '../assets/img/works/ramen-prev.png';
-import ramen1 from '../assets/img/works/ramen-adviser_1.jpg';
-import ramen2 from '../assets/img/works/ramen-adviser_2.jpg';
-import game1 from '../assets/img/works/game_1.png';
-import game2 from '../assets/img/works/game_2.png';
-import game3 from '../assets/img/works/game_3.png';
-import game4 from '../assets/img/works/game_4.png';
-import game5 from '../assets/img/works/game_5.png';
-import rainbowColors from '../assets/img/works/rainbow-colors-154569_640.png';
-import uecMap from '../assets/img/works/uec-map.png';
-import uecMap2 from '../assets/img/works/uec-map_2.png';
-import portfolioSite1 from '../assets/img/works/portfolio-site_1.png';
-import portfolioSite2 from '../assets/img/works/portfolio-site_2.png';
-// import positiveImage from '../assets/img/works/young-woman-1722402_640.jpg';
-import construction from '../assets/img/common/construction.png';
-import favimakerPrev from '../assets/img/works/favimaker-preview.png';
-import favimaker1 from '../assets/img/works/favimaker_1.png';
-import favimaker2 from '../assets/img/works/favimaker_2.png';
-import osms1 from '../assets/img/works/osms_1.png';
-import nicebuddy1 from '../assets/img/works/nicebuddy_1.png';
-import nicebuddy2 from '../assets/img/works/nicebuddy_2.png';
-import nicebuddy3 from '../assets/img/works/nicebuddy_3.png';
-import nicebuddy4 from '../assets/img/works/nicebuddy_4.png';
-import l4d2_1 from '../assets/img/works/l4d2_1.png';
-import l4d2_2 from '../assets/img/works/l4d2_2.png';
-import hatai_1 from '../assets/img/works/hatai_1.png';
+import ramenPrev from '/img/works/ramen-prev.png';
+import ramen1 from '/img/works/ramen-adviser_1.jpg';
+import ramen2 from '/img/works/ramen-adviser_2.jpg';
+import game1 from '/img/works/game_1.png';
+import game2 from '/img/works/game_2.png';
+import game3 from '/img/works/game_3.png';
+import game4 from '/img/works/game_4.png';
+import game5 from '/img/works/game_5.png';
+import rainbowColors from '/img/works/rainbow-colors-154569_640.png';
+import uecMap from '/img/works/uec-map.png';
+import uecMap2 from '/img/works/uec-map_2.png';
+import portfolioSite1 from '/img/works/portfolio-site_1.png';
+import portfolioSite2 from '/img/works/portfolio-site_2.png';
+// import positiveImage from '/img/works/young-woman-1722402_640.jpg';
+import construction from '/img/common/construction.png';
+import favimakerPrev from '/img/works/favimaker-preview.png';
+import favimaker1 from '/img/works/favimaker_1.png';
+import favimaker2 from '/img/works/favimaker_2.png';
+import osms1 from '/img/works/osms_1.png';
+import nicebuddy1 from '/img/works/nicebuddy_1.png';
+import nicebuddy2 from '/img/works/nicebuddy_2.png';
+import nicebuddy3 from '/img/works/nicebuddy_3.png';
+import nicebuddy4 from '/img/works/nicebuddy_4.png';
+import l4d2_1 from '/img/works/l4d2_1.png';
+import l4d2_2 from '/img/works/l4d2_2.png';
+import hatai_1 from '/img/works/hatai_1.png';
 
 export interface Work {
     title: string;

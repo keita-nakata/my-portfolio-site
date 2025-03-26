@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { Dialog, DialogContent, Typography, Box, IconButton } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import UrlBox from './UrlBox';
-import githubLogo from '../assets/img/common/github_2111432.png';
-import publicLogo from '../assets/img/common/globe.png';
-import slideLogo from '../assets/img/common/presentation.png';
+import githubLogo from '/img/common/github_2111432.png';
+import publicLogo from '/img/common/globe.png';
+import slideLogo from '/img/common/presentation.png';
 
 interface WorkItemDialogProps {
     open: boolean;
