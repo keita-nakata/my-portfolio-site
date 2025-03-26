@@ -24,7 +24,7 @@ import uecMap from '../assets/img/works/uec-map.png';
 import uecMap2 from '../assets/img/works/uec-map_2.png';
 import portfolioSite1 from '../assets/img/works/portfolio-site_1.png';
 import portfolioSite2 from '../assets/img/works/portfolio-site_2.png';
-import positiveImage from '../assets/img/works/young-woman-1722402_640.jpg';
+// import positiveImage from '../assets/img/works/young-woman-1722402_640.jpg';
 import construction from '../assets/img/common/construction.png';
 import favimakerPrev from '../assets/img/works/favimaker-preview.png';
 import favimaker1 from '../assets/img/works/favimaker_1.png';
@@ -36,18 +36,60 @@ import nicebuddy3 from '../assets/img/works/nicebuddy_3.png';
 import nicebuddy4 from '../assets/img/works/nicebuddy_4.png';
 import l4d2_1 from '../assets/img/works/l4d2_1.png';
 import l4d2_2 from '../assets/img/works/l4d2_2.png';
+import hatai_1 from '../assets/img/works/hatai_1.png';
 
 export interface Work {
     title: string;
     imageSrc: string;
     description: string[];
     technologies: string;
-    githubUrl: string;
-    publicUrl: string;
+    githubUrl?: string;
+    publicUrl?: string;
+    slideUrl?: string;
     imageList: string[];
 }
 
 export const works: Work[] = [
+    {
+        title: "【ハッカソン最優秀賞】Nice Buddy",
+        imageSrc: nicebuddy2,
+        description: [
+            `2024年10~11月に開催された株式会社PKSHA Technology主催の生成AIハッカソンで最優秀賞を頂いたプロダクト。`,
+            `PCの画面を見ながら教えてくれるAIアシスタントで、OpenAIのChatAPIとAudioAPIを使用し、生成した回答を音声でフィードバックする。`,
+            `音声入力の内容からスクリーン情報の必要性をAIに判断させ、必要なら自動でスクリーンショットを撮影してその情報をもとに回答する。`,
+            `ソースコードなどが回答に含まれるときはコード部分を音声部分と分けて生成され、ユーザーには音声+コード部分のテキストとしてフィードバックされる。`,
+        ],
+        technologies: "React, TypeScript, MUI, Python, FastAPI, OpenAI API",
+        githubUrl: 'https://github.com/KimuraAkikazu/Nice-Buddy',
+        publicUrl: "",
+        slideUrl: 'https://drive.google.com/drive/folders/1ulu0WAIaY4l3QHyB8974IFvRjzSjrjRJ?usp=sharing',
+        imageList: [nicebuddy1, nicebuddy2, nicebuddy3, nicebuddy4],
+    },
+    {
+        title: '民宿ハタイ様 公式ウェブサイト',
+        imageSrc: hatai_1,
+        description: [
+            `三重県熊野市で営業する民宿ハタイ様の公式ウェブサイト。`,
+            `フロントエンドはNext.js+TypeScript、バックエンド（データベース）はSupabaseを使用して開発中。`,
+        ],
+        technologies: "Next.js, TypeScript, MUI, Supabase, PostgreSQL",
+        githubUrl: "",
+        publicUrl: "",
+        imageList: [hatai_1],
+    },
+    {
+        title: "UEC Map",
+        imageSrc: uecMap,
+        description: [
+            "「実システム創造」という講義でチーム開発。",
+            `位置情報を最大限活用したキャンパスマップアプリ。特筆すべきはマップ上にコメントを残せるようにしたことである。UIは細部までこだわった。`,
+            `プレゼンに用いたスライドのリンクが下にあるので、ぜひ見ていただきたい。`
+        ],
+        technologies: "Kotlin, Android Studio",
+        githubUrl: "",
+        slideUrl: "https://www.canva.com/design/DAGi3bgf5Qw/Y1Dv93knYp7Sg5CWCco1dg/view?utm_content=DAGi3bgf5Qw&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h652ab350cc",
+        imageList: [uecMap2],
+    },
     {
         title: "ポートフォリオサイト",
         imageSrc: portfolioSite1,
@@ -63,20 +105,6 @@ export const works: Work[] = [
         imageList: [portfolioSite1, portfolioSite2],
     },
     {
-        title: "【ハッカソン最優秀賞】Nice Buddy",
-        imageSrc: nicebuddy2,
-        description: [
-            `2024年10~11月に開催された株式会社PKSHA Technology主催の生成AIハッカソンで最優秀賞を頂いたプロダクト。`,
-            `簡単に言うと、画面を見ながら教えてくれるAIアシスタント。OpenAIのChatAPIとAudioAPIを使用し、生成した回答を音声でフィードバックする。`,
-            `さらに、ソースコードなどが回答に含まれるときはコード部分を音声部分と分けて生成され、ユーザーには音声+コード部分のテキストとしてフィードバックされる。`,
-            `また、音声入力の内容からスクリーン情報の必要性をAIに判断させ、必要なら自動でスクリーンショットを撮影してその情報をもとに回答する。`,
-        ],
-        technologies: "React, TypeScript, MUI, Python, FastAPI, OpenAI API",
-        githubUrl: "https://github.com/KimuraAkikazu/Nice-Buddy",
-        publicUrl: "",
-        imageList: [nicebuddy1, nicebuddy2, nicebuddy3, nicebuddy4],
-    },
-    {
         title: "One Punch favicon",
         imageSrc: favimakerPrev,
         description: [
@@ -86,7 +114,7 @@ export const works: Work[] = [
             `アップロードされた画像データはバックエンドに送られ、設定に必要な様々な形式に変換した後AWS S3に保存。
             その後、生成されたURLをフロントエンドに返し、ユーザーがダウンロードできるようにした。
             s3に保存されたファイルは一定期間で削除されるように設定している。`,
-            `また、フロントエンドはVercel、バックエンドはHerokuでデプロイしている。`,
+            `フロントエンドはVercel、バックエンドはHerokuでデプロイしている。`,
         ],
         technologies: "React, TypeScript, Node.js, Python, FastAPI, AWS(S3)",
         githubUrl: "https://github.com/keita-nakata/one-punch-favicon",
@@ -112,11 +140,11 @@ export const works: Work[] = [
         title: "研究室 在室状況管理システム",
         imageSrc: osms1,
         description: [
-            "研究室の在室状況を表示するWebシステム。",
-            "もともと紙と磁石で管理していた研究室の在室管理表をデジタル化した。",
+            "研究室のメンバーの在室状況を表示するWebシステム。",
+            "もともと紙と磁石で管理していた在室管理表をデジタル化した。",
             "各自のスマホのWi-Fi接続状況をarp-scanで取得し、登録されたMacアドレスと照合して在室状況を管理している。",
-            "紙でできていたことは全てこのシステムでもできるように、かつ誰にとっても使いやすいようにする必要があり苦労した。",
-            "端末の検出漏れがわりと高い頻度であるので、その対策として一度の検出漏れで退室にせず一定時間検出されなかった場合にようやく退室とする設計にした。",
+            "紙でできていたことは全てこのシステムでもできるように、かつ誰にとっても使いやすいようにすることにこだわった。",
+            "端末の検出漏れが高い頻度であるので、その対策として一度の検出漏れで退室にせず一定時間検出されなかった場合にようやく退室とする設計にした。",
         ],
         technologies: "HTML, CSS, PHP, MySQL, Raspberry Pi, apache",
         githubUrl: "",
@@ -142,8 +170,8 @@ export const works: Work[] = [
         imageSrc: game5,
         description: [
             "ゲームを作って稼ぎたい、と思い立ち作り始めた。",
-            "イラスト素材はすべて自作しているので、絵のクオリティには目を瞑って頂きたい。",
-            "あと少しで完成なのだが、最後の仕上げがなかなか進まない。ここまで来たら完成させたい。",
+            "イラスト素材はすべて自作している。",
+            "開発中。"
         ],
         technologies: "Unity, C#, IrisPaint",
         githubUrl: "https://github.com/keita-nakata/EscapeRikei",
@@ -169,35 +197,21 @@ export const works: Work[] = [
         publicUrl: "",
         imageList: [construction],
     },
-    {
-        title: "電通大なんでもマップ",
-        imageSrc: uecMap,
-        description: [
-            "「実システム創造」という講義で現在チームで開発中。",
-            "キャンパス内の情報に特化し、建物名や施設名で検索できるだけでなく授業名からその開講場所をマップ上で表示する。",
-            "さらに、ユーザーが各自で拡張マップを作成・追加できる機能も搭載し、学内のイベントなどにも臨機応変に対応。",
-            "将来的には、学食のメニューや待ち時間などの情報も提供できるよう拡張したいと考えている。",
-        ],
-        technologies: "Kotlin, Android Studio",
-        githubUrl: "",
-        publicUrl: "",
-        imageList: [uecMap2],
-    },
-    {
-        title: "ポジティブになれるSNS 『ポジポジ』",
-        imageSrc: positiveImage,
-        description: [
-            "株式会社エムティーアイ様（東京都）のインターンにおいて作成。",
-            `「ポジティブシンキングを身に着けて、人生をもっと良くしたい！」という人に焦点を当てたアプリ。
-            投稿はポジティブな内容のみに限定し、ポジティブなリアクションのみを送ることができるよう設計。
-            否定的なコメントができないようにコメント機能をあえて排除し、ユーザーが安心して利用できる環境を作った。`,
-            `開発は5人チームで行い、自分はフロント・バックの両方を担当。特に投稿まわりの開発を行った。`
-        ],
-        technologies: "Vue.js, AWS(S3, Lambda, API Gateway, DynamoDB), ",
-        githubUrl: "https://github.com/keita-nakata/mti-intern",
-        publicUrl: "",
-        imageList: [construction],
-    },
+    // {
+    //     title: "ポジティブになれるSNS 『ポジポジ』",
+    //     imageSrc: positiveImage,
+    //     description: [
+    //         "株式会社エムティーアイ様（東京都）のインターンにおいて作成。",
+    //         `「ポジティブシンキングを身に着けて、人生をもっと良くしたい！」という人に焦点を当てたアプリ。
+    //         投稿はポジティブな内容のみに限定し、ポジティブなリアクションのみを送ることができるよう設計。
+    //         否定的なコメントができないようにコメント機能をあえて排除し、ユーザーが安心して利用できる環境を作った。`,
+    //         `開発は5人チームで行い、自分はフロント・バックの両方を担当。特に投稿まわりの開発を行った。`
+    //     ],
+    //     technologies: "Vue.js, AWS(S3, Lambda, API Gateway, DynamoDB), ",
+    //     githubUrl: "https://github.com/keita-nakata/mti-intern",
+    //     publicUrl: "",
+    //     imageList: [construction],
+    // },
     
     // 他の作品を追加
 ];

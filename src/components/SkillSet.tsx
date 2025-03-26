@@ -21,8 +21,8 @@ const SkillSet: React.FC = () => {
         return {
             data: [
                 { name: 'React', value: 2 },
-                { name: 'Vue.js', value: 1 },
-                { name: 'MySQL', value: 1 },
+                { name: 'MySQL', value: 2 },
+                { name: 'PostgreSQL', value: 1 },
             ],
             title: "フレームワーク/データベース"
         };
@@ -31,9 +31,10 @@ const SkillSet: React.FC = () => {
     const Others = () => {
         return {
             data: [
+                { name: 'MUI', value: 2 },
                 { name: 'PyTorch/OpenCV', value: 2 },
                 { name: 'AWS', value: 1 },
-                { name: 'Unity', value: 1 },
+                { name: 'Supabase', value: 1 },
                 { name: 'Raspberry Pi', value: 1 },
             ],
             title: "その他"
