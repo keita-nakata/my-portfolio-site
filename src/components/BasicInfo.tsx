@@ -1,6 +1,6 @@
 import React from 'react';
 import { Typography, Box } from '@mui/material';
-import faceImage from '../assets/img/profile/face.jpeg';
+import faceImage from '/img/profile/face.jpeg';
 
 const BasicInfo: React.FC = () => {
     const name = "中田 啓太";

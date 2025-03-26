@@ -1,6 +1,6 @@
-import baseballImage from '../assets/img/profile/baseball.jpeg';
-import fishingImage from '../assets/img/profile/fishing.jpg';
-import runningImage from '../assets/img/profile/running_1.png';
+import baseballImage from '/img/profile/baseball.jpeg';
+import fishingImage from '/img/profile/fishing.jpg';
+import runningImage from '/img/profile/running_1.png';
 
 export interface Hobby {
     imageUrl: string;
