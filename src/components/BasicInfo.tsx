@@ -5,7 +5,7 @@ import faceImage from '/img/profile/face.jpeg';
 const BasicInfo: React.FC = () => {
     const name = "中田 啓太";
     const origin = "三重県出身";
-    const belonging = "三重大学工学部 卒業 → 電気通信大学 情報理工学研究科 情報学専攻 博士前期課程1年 | 橋山研究室所属";
+    const belonging = "三重大学工学部 卒業 → 電気通信大学 情報理工学研究科 情報学専攻 博士前期課程2年 | 橋山研究室所属";
     const research = `卒業研究ではゼブラフィッシュ遊泳動画からその個体の年齢推定をする深層学習モデルの開発に取り組んだ。
     現在は映像でのスポーツ観戦において、視聴者個人の特性に応じた情報を提供してより良い視聴体験を生み出すことを目標とした研究を行っている。`;
 
