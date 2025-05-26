@@ -70,11 +70,11 @@ export const works: Work[] = [
         imageSrc: hatai_1,
         description: [
             `三重県熊野市で営業する民宿ハタイ様の公式ウェブサイト。`,
-            `フロントエンドはNext.js+TypeScript、バックエンド（データベース）はSupabaseを使用して開発中。`,
+            `フロントエンドはNext.js+TypeScript、バックエンド（データベース）はSupabaseを使用して開発。別で管理画面も開発し、お知らせの投稿や予約状況の管理を行えるようにした。`,
         ],
         technologies: "Next.js, TypeScript, MUI, Supabase, PostgreSQL",
         githubUrl: "",
-        publicUrl: "",
+        publicUrl: "https://hatai-official.vercel.app/",
         imageList: [hatai_1],
     },
     {
